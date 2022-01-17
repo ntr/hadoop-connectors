@@ -1617,6 +1617,7 @@ public abstract class GoogleHadoopFileSystemBase extends FileSystem
   @Override
   public Token<?> getDelegationToken(String renewer) throws IOException {
     Token<?> result = null;
+
     if (delegationTokens != null) {
       result = delegationTokens.getBoundOrNewDT(renewer);
     }
